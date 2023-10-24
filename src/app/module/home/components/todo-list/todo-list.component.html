@@ -1,0 +1,15 @@
+
+<section [ngClass]="{'loading': !listaCompleta.length}">
+    <ul *ngIf="listaCompleta.length">
+        <li *ngFor="let itensLista of listaCompleta; let position = index">
+            <input type="checkbox" [(ngModel)]="itensLista.checked">
+            <input type="text" (keyup)="validacaoDoInput(itensLista.task, position)" [(ngModel)]="itensLista.task" [ngClass]="{'checked': itensLista.checked}">
+
+            <button (click)="deletarItemDaLista(position)">
+                <img src="assets/icons/icon-trash.svg" alt="imagem Ilustrativa.">
+            </button>
+        </li>        
+    </ul>    
+</section>
+<app-todo-input-add-itens (EmitItemListaCompleta)="setEmitLista($event)"></app-todo-input-add-itens>
+<app-todo-button-delete-all *ngIf="listaCompleta.length" (click)="deletaTudo()"></app-todo-button-delete-all>
