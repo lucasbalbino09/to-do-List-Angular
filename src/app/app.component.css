@@ -1,1 +1,37 @@
-@import '@angular/material/prebuilt-themes/pink-bluegrey.css'
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+main {
+    width: 600px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+mat-expansion-panel {
+    margin-bottom: 8px;
+}
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container {
+    width: 250px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    gap: 4px;
+}
+.total {
+    background-color: #b3c4fe;
+}
+.pendentes {
+    background-color: #fef57f;
+}

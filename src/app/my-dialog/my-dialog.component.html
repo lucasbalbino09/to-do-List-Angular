@@ -1,15 +1,16 @@
 <h2 mat-dialog-title>Adicionar Tarefa</h2>
 
 <mat-dialog-content>
-    <form action="">
+    <form (ngSubmit)="adicionarTarefa()">
         <mat-form-field appearance="fill">
             <mat-label>Nome: </mat-label>
-            <input type="text" required>
+            <input matInput [(ngModel)]="novaTarefa.name" name="name" type="text" required>
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Descrição: </mat-label>
-            <input type="text" required>
+            <input matInput [(ngModel)]="novaTarefa.descricao" name="descricao" type="text" required>
         </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Adicionar tarefa</button>
     </form>
 </mat-dialog-content>
 
