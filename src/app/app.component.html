@@ -1,0 +1,19 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h2>Titulo</h2>
+    </mat-panel-title>
+    <mat-panel-description>
+      <!-- Descrição -->
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option selected>A Fazer</mat-chip-option>
+    <mat-chip-option>Fazendo</mat-chip-option>
+    <mat-chip-option>Concluido</mat-chip-option>
+  </mat-chip-listbox>
+</mat-expansion-panel>
+
+<button (click)="openDialog()" mat-fab color="primary">
+  <mat-icon>add</mat-icon>
+</button>
