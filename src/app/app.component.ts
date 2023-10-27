@@ -38,6 +38,9 @@ export class AppComponent {
   get totalDeConcluido(): number {
     return this.tarefas.filter(tarefa => tarefa.situacao === "Concluido").length
   }
+  get totalDeAFazer(): number {
+    return this.tarefas.filter(tarefa => tarefa.situacao === "Fazendo").length
+  }
   //metedo altera status da tarefa
   alterarSituacao(tarefa: Task, situacao: string): void {
     tarefa.situacao = situacao
