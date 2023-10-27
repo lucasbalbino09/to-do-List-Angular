@@ -8,6 +8,10 @@
       <mat-icon>schedule</mat-icon>
       Pendentes: {{totalDePendentes}}
     </h2>
+    <h2 class="container mat-elevation-z8 total Concluido">
+      <mat-icon>schedule</mat-icon>
+      Concluido: {{totalDeConcluido}}
+    </h2>
   </section>
   <div *ngFor="let tarefa of tarefas">
     <mat-expansion-panel>
