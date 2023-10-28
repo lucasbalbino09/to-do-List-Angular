@@ -33,12 +33,12 @@ section {
     background-color: #b3c4fe;
 }
 .pendentes {
-    background-color: #f00909;
-    color: #ffffff;
+    background-color: #f00909b7;
+    
 }
 .concluido {
-    background-color: #36ad07;
-    color: aliceblue;
+    background-color: #36ad078f;
+    
 }
 .fazendo {
     background-color: #fef57f;

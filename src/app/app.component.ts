@@ -10,6 +10,7 @@ import { MyDialogComponent } from './my-dialog/my-dialog.component';
 })
 export class AppComponent {
   title = 'todo-list';
+  usuario : string = "Lucas Balbino"
   constructor(public dialog: MatDialog) { }
   //lista de tarefas
   tarefas: Task[] = [
