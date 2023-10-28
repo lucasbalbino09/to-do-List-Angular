@@ -33,5 +33,17 @@ section {
     background-color: #b3c4fe;
 }
 .pendentes {
+    background-color: #f00909;
+    color: #ffffff;
+}
+.concluido {
+    background-color: #36ad07;
+    color: aliceblue;
+}
+.fazendo {
     background-color: #fef57f;
+}
+.title {
+    margin-bottom: 24px;
+    margin-top: 24px;
 }

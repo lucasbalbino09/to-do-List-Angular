@@ -1,22 +1,24 @@
 <main>
+  <h2 class="title">Olá 👋</h2>
   <section>
     <h2 class="container mat-elevation-z8 total">
       <mat-icon>format_list_bulleted</mat-icon>
       Total de Tarefas: {{totalDeTarefas}}
     </h2>
     <h2 class="container mat-elevation-z8 total pendentes">
-      <mat-icon>schedule</mat-icon>
+      <mat-icon>hourglass_top</mat-icon>
       Pendentes: {{totalDePendentes}}
     </h2>
-    <h2 class="container mat-elevation-z8 total Concluido">
-      <mat-icon>schedule</mat-icon>
+    <h2 class="container mat-elevation-z8 total concluido">
+      <mat-icon>done</mat-icon>
       Concluido: {{totalDeConcluido}}
     </h2>
-    <h2 class="container mat-elevation-z8 total Fazendo">
+    <h2 class="container mat-elevation-z8 total fazendo">
       <mat-icon>schedule</mat-icon>
-      Fazendo: {{totalDeAFazer}}
+      Em Andamento: {{totalDeAFazer}}
     </h2>
   </section>
+  <h2 class="title">Tarefas:</h2>
   <div *ngFor="let tarefa of tarefas">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
