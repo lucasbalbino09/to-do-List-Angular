@@ -15,7 +15,7 @@ export class AppComponent {
   //lista de tarefas
   tarefas: Task[] = [];
   tarefaList: Task[] = [];
-
+  
   //metodo para abrir nosso dialog
   openDialog(): void {
     const dialogRef = this.dialog.open(MyDialogComponent);
