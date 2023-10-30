@@ -1,7 +1,7 @@
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 main {
-    width: 600px;
+    width: 100%;
     margin: auto;
     height: 100%;
     position: relative;
@@ -47,10 +47,16 @@ section {
     margin-bottom: 24px;
     margin-top: 24px;
 }
+.card-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Para distribuir os cards uniformemente em cada linha */
+    gap: 10px; /* Espaçamento entre os cards */
+}
 .card-list {
     flex-basis: calc(33.33% - 10px); /* Defina a largura de cada card para 33,33% com um espaço de 10px entre eles */
     box-sizing: border-box; /* Certifique-se de que a largura inclua o espaço */
-    margin-bottom: 10px; /* Espaçamento na parte inferior de cada card */
+    margin-bottom: 15px; /* Espaçamento na parte inferior de cada card */
 }
 .card-body {
     background-color: white;
