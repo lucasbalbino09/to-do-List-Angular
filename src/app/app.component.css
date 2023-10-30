@@ -16,16 +16,17 @@ mat-expansion-panel {
 }
 section {
     display: flex;
+    margin-top: 50px;    
     justify-content: center;
     flex-wrap: wrap;
 }
 .container {
     width: 250px;
     height: 100px;
-    border-radius: 8px;
+    border-radius: 8px;    
     margin: 8px;
     display: flex;
-    align-items: center;
+    align-items: center;   
     padding: 4px;
     gap: 4px;
 }
