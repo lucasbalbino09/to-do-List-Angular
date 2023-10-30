@@ -7,6 +7,7 @@ import { Task } from 'src/models/Task';
   templateUrl: './my-dialog.component.html',
   styleUrls: ['./my-dialog.component.css']
 })
+
 export class MyDialogComponent {
   constructor(public dialogRef: MatDialogRef<MyDialogComponent>) {
   }

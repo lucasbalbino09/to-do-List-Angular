@@ -1,22 +1,30 @@
 <main>
   <h2 class="title">Olá, {{usuario}} 👋</h2>
   <section>
-    <h2 class="container mat-elevation-z8 total">
-      <mat-icon>format_list_bulleted</mat-icon>
-      Total de Tarefas: {{totalDeTarefas}}
-    </h2>
-    <h2 class="container mat-elevation-z8 total pendentes">
-      <mat-icon>hourglass_top</mat-icon>
-      Pendentes: {{totalDePendentes}}
-    </h2>
-    <h2 class="container mat-elevation-z8 total concluido">
-      <mat-icon>done</mat-icon>
-      Concluido: {{totalDeConcluido}}
-    </h2>
-    <h2 class="container mat-elevation-z8 total fazendo">
-      <mat-icon>schedule</mat-icon>
-      Em Andamento: {{totalDeAFazer}}
-    </h2>
+    <div (click)="cardSelecionado('')">
+      <h2 class="container mat-elevation-z8 total">
+        <mat-icon>format_list_bulleted</mat-icon>
+        Total de Tarefas: {{totalDeTarefas}}
+      </h2>
+    </div>
+    <div (click)="cardSelecionado('Pendente')">
+      <h2 class="container mat-elevation-z8 total pendentes">
+        <mat-icon>hourglass_top</mat-icon>
+        Pendentes: {{totalDePendentes}}
+      </h2>
+    </div>
+    <div (click)="cardSelecionado('Concluido')">
+      <h2 class="container mat-elevation-z8 total concluido">
+        <mat-icon>done</mat-icon>
+        Concluido: {{totalDeConcluido}}
+      </h2>
+    </div>
+    <div (click)="cardSelecionado('Fazendo')">
+      <h2 class="container mat-elevation-z8 total fazendo">
+        <mat-icon>schedule</mat-icon>
+        Em Andamento: {{totalDeAFazer}}
+      </h2>
+    </div>
   </section>
   <h2 class="title">Tarefas:</h2>
   <div *ngFor="let tarefa of tarefas">
@@ -36,6 +44,22 @@
       </mat-chip-listbox>
     </mat-expansion-panel>
   </div>
+  <div *ngFor="let listatarefa of tarefaList let indice = index"
+  class="card-list">
+    <mat-card class="card-body">
+      <mat-card-header>
+        <mat-card-subtitle>Tarefa #{{indice}}</mat-card-subtitle>
+        <mat-card-title>{{listatarefa.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>        
+        <p>{{listatarefa.descricao}}</p>
+        <mat-divider></mat-divider>
+      </mat-card-content>    
+      <mat-card-footer>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+  </div>  
   <button (click)="openDialog()" mat-fab color="primary">
     <mat-icon>add</mat-icon>
   </button>

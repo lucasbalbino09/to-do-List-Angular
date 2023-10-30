@@ -47,3 +47,10 @@ section {
     margin-bottom: 24px;
     margin-top: 24px;
 }
+.card-list {
+    margin-top: 15px;
+}
+.card-body {
+    color: white;
+}
+

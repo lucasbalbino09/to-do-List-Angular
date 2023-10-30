@@ -13,12 +13,9 @@ export class AppComponent {
   usuario : string = "Lucas Balbino"
   constructor(public dialog: MatDialog) { }
   //lista de tarefas
-  tarefas: Task[] = [
-    new Task({
-      name: "Estudar Angular",
-      descricao: "Preciso estudar angular..."
-    })
-  ]
+  tarefas: Task[] = [];
+  tarefaList: Task[] = [];
+
   //metodo para abrir nosso dialog
   openDialog(): void {
     const dialogRef = this.dialog.open(MyDialogComponent);
@@ -46,4 +43,14 @@ export class AppComponent {
   alterarSituacao(tarefa: Task, situacao: string): void {
     tarefa.situacao = situacao
   }
+
+  cardSelecionado(tarefaEnviada : string) {
+    this.tarefaList = [];
+    if(tarefaEnviada == "") {
+      this.tarefaList = this.tarefas;   
+    } else {
+      this.tarefaList =  this.tarefas.filter(tarefa => tarefa.situacao === tarefaEnviada);
+    }
+  }
+
 }
