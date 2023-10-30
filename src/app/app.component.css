@@ -46,11 +46,13 @@ section {
 .title {
     margin-bottom: 24px;
     margin-top: 24px;
+    text-align: center;
 }
 .card-list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Para distribuir os cards uniformemente em cada linha */
+    width: 10%;
     gap: 10px; /* Espaçamento entre os cards */
 }
 .card-list {
